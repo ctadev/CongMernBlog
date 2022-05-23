@@ -4,18 +4,26 @@
   max-width: 1150px;
   margin: 0 auto;
   position: relative;
-  @include rowCenter;
-  align-items: flex-start;
+  @include columnCenter;
+  flex-direction: column-reverse;
+  @include responsive(laptop) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
   .left {
     @include rowCenter;
     flex-wrap: wrap;
     gap: 1.5rem;
-    width: 65%;
     padding: 10px;
+    @include responsive(laptop) {
+      width: 65%;
+    }
   }
 
   .right {
-    width: 35%;
     padding: 10px;
+    @include responsive(laptop) {
+      width: 35%;
+    }
   }
 }

@@ -1,0 +1,21 @@
+@use "../components/globalStyle/" as *;
+
+.layout {
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+  @include rowCenter;
+  align-items: flex-start;
+  .left {
+    @include rowCenter;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 65%;
+    padding: 10px;
+  }
+
+  .right {
+    width: 35%;
+    padding: 10px;
+  }
+}

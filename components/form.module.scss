@@ -1,0 +1,37 @@
+@use "../components/globalStyle/" as *;
+
+.forms {
+  background-color: whitesmoke;
+  padding: 15px 20px;
+  border-radius: 5px;
+  .formContainer {
+    @include columnCenter;
+    align-items: flex-start;
+    h1 {
+      text-align: center;
+      width: 100%;
+    }
+    .inputContainer {
+      width: 100%;
+      @include columnCenter;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .fileContainer {
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 15px 5px;
+      background-color: blue;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use "../components/globalStyle/" as *;
+
+.cards {
+  width: 300px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  min-height: 350px;
+  .top {
+    position: relative;
+    height: 170px;
+    .images {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.521);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .creator {
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      width: 85%;
+      z-index: 3;
+      color: white;
+      @include rowCenter;
+      justify-content: space-between;
+      .edit_container {
+        position: relative;
+        @include columnCenter;
+        p {
+          display: none;
+          background-color: rgba(245, 245, 245, 0.541);
+          padding: 5px 15px;
+          cursor: pointer;
+        }
+        &:hover {
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 15px;
+    height: 180px;
+    @include columnCenter;
+    align-items: flex-start;
+    justify-content: space-between;
+    .info {
+      .comments {
+        margin-top: 1rem;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    .btn {
+      margin-top: 1rem;
+      @include rowCenter;
+      width: 100%;
+      justify-content: space-between;
+      color: blue;
+      .likes {
+        @include rowCenter;
+        gap: 0.5rem;
+        cursor: pointer;
+      }
+      .deletes {
+        @include rowCenter;
+        gap: 0.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
